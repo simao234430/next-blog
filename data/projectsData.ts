@@ -1,24 +1,17 @@
 const projectsData = [
   {
-    title: 'Branding',
-    description:
-      'This project is a fully responsive & complex marketing website with smooth animations built with Next.js & Framer-Motion.',
-    imgSrc: '/static/images/projects/Branding.png',
-    href: 'https://github.com/reubence/awwards-website-recreation',
+    title: 'mathgame',
+    description: `Can you solve 10 basic math questions in 10 seconds? If you think you can, then give this game a try!`,
+    imgSrc: '/static/images/project/mathgame.png',
+    tag: ['javascript', 'css'],
+    href: 'https://mathgame-dlarroder.vercel.app/',
   },
   {
-    title: 'Fin-Tech',
-    description:
-      'An enterprise resource planning software to manage daily processes including Accounting, Invoice Generation & Tax Filing. It was built to be fully responsive using Next.js & Supabase and aims to automate various processes and enhance productivity of employeess.',
-    imgSrc: '/static/images/projects/FinTech.png',
-    href: 'https://github.com/reubence/ERP',
-  },
-  {
-    title: 'Blockchain',
-    description:
-      'A single page website that mints NFTs for the user on the largest marketplace (OpenSea) and is fully responsive. Built using Next.js, Framer-Motion and Supabase.',
-    imgSrc: '/static/images/projects/Blockchain.png',
-    href: 'https://github.com/reubence/nft-minting-live',
+    title: 'snakegame',
+    description: 'Recreated the classic 3310 snake game using plain HTML and JavaScript!',
+    imgSrc: '/static/images/project/snakegame.png',
+    tag: ['javascript', 'css'],
+    href: 'https://snakegame-dlarroder.vercel.app/',
   },
 ]
 

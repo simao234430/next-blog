@@ -1,4 +1,4 @@
-/* eslint-disable jsx-a11y/anchor-has-content */
+import { LinkButton } from '@dlarroder/playground'
 import Link from 'next/link'
 import { AnchorHTMLAttributes, DetailedHTMLProps } from 'react'
 
@@ -11,17 +11,17 @@ const CustomLink = ({
 
   if (isInternalLink) {
     return (
-      <Link href={href}>
-        <a {...rest} />
+      <Link href={href} legacyBehavior>
+        <LinkButton {...rest} />
       </Link>
     )
   }
 
   if (isAnchorLink) {
-    return <a href={href} {...rest} />
+    return <LinkButton href={href} {...rest} />
   }
 
-  return <a target="_blank" rel="noopener noreferrer" href={href} {...rest} />
+  return <LinkButton target="_blank" rel="noopener noreferrer" href={href} {...rest} />
 }
 
 export default CustomLink
