@@ -7,6 +7,7 @@ import { CoreContent } from '@/lib/utils/contentlayer'
 import type { Authors, Blog } from 'contentlayer/generated'
 import { ReactNode } from 'react'
 
+
 const postDateTemplate: Intl.DateTimeFormatOptions = {
   year: 'numeric',
   month: 'long',

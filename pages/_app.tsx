@@ -1,6 +1,9 @@
 import '@/styles/prism.css'
 import '@/styles/tailwind.css'
-import '@fontsource/mukta'
+import 'katex/dist/katex.css'
+
+import '@fontsource/inter/variable-full.css'
+// import '@fontsource/mukta'
 
 import LogRocket from '@/components/Logrocket'
 import ProgressBar from '@/components/ProgressBar'

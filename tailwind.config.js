@@ -20,44 +20,46 @@ module.exports = {
         sans: ['InterVariable', ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        // 'primary-color': '#1e90ff',
-        // 'primary-color-dark': '#13b57b',
-        primary: colors.teal,
+        'background-color': '#1F2023',
+        'primary-color': '#1e90ff',
+        'primary-color-dark': '#1e90ff',
+        'spotify-green': '#1DB954',
+        primary: colors.blue,
         gray: colors.neutral,
       },
       typography: (theme) => ({
         DEFAULT: {
           css: {
-            color: theme('colors.gray.700'),
+            color: theme('colors.slate.700'),
             a: {
-              color: theme('colors.primary.500'),
+              color: theme('colors.primary-color'),
               '&:hover': {
-                color: `${theme('colors.primary.600')} !important`,
+                color: theme('colors.primary.600'),
               },
               code: { color: theme('colors.primary.400') },
             },
             h1: {
               fontWeight: '700',
               letterSpacing: theme('letterSpacing.tight'),
-              color: theme('colors.gray.900'),
+              color: theme('colors.slate.900'),
             },
             h2: {
               fontWeight: '700',
               letterSpacing: theme('letterSpacing.tight'),
-              color: theme('colors.gray.900'),
+              color: theme('colors.slate.900'),
             },
             h3: {
               fontWeight: '600',
-              color: theme('colors.gray.900'),
+              color: theme('colors.slate.900'),
             },
             'h4,h5,h6': {
-              color: theme('colors.gray.900'),
+              color: theme('colors.slate.900'),
             },
             pre: {
               backgroundColor: theme('colors.gray.800'),
             },
             code: {
-              color: theme('colors.pink.500'),
+              color: theme('colors.gray.500'),
               backgroundColor: theme('colors.gray.100'),
               paddingLeft: '4px',
               paddingRight: '4px',
@@ -65,10 +67,10 @@ module.exports = {
               paddingBottom: '2px',
               borderRadius: '0.25rem',
             },
-            'code::before': {
+            'code:before': {
               content: 'none',
             },
-            'code::after': {
+            'code:after': {
               content: 'none',
             },
             details: {
@@ -80,11 +82,11 @@ module.exports = {
               borderRadius: '0.25rem',
             },
             hr: { borderColor: theme('colors.gray.200') },
-            'ol li::marker': {
+            'ol li:before': {
               fontWeight: '600',
               color: theme('colors.gray.500'),
             },
-            'ul li::marker': {
+            'ul li:before': {
               backgroundColor: theme('colors.gray.500'),
             },
             strong: { color: theme('colors.gray.600') },
@@ -96,30 +98,30 @@ module.exports = {
         },
         dark: {
           css: {
-            color: theme('colors.gray.300'),
+            color: theme('colors.slate.200'), //text color for dark mode
             a: {
-              color: theme('colors.primary.500'),
+              color: theme('colors.primary-color-dark'), // links in dark mode
               '&:hover': {
-                color: `${theme('colors.primary.400')} !important`,
+                color: theme('colors.primary.400'),
               },
               code: { color: theme('colors.primary.400') },
             },
             h1: {
               fontWeight: '700',
               letterSpacing: theme('letterSpacing.tight'),
-              color: theme('colors.gray.100'),
+              color: theme('colors.slate.100'),
             },
             h2: {
               fontWeight: '700',
               letterSpacing: theme('letterSpacing.tight'),
-              color: theme('colors.gray.100'),
+              color: theme('colors.slate.100'),
             },
             h3: {
               fontWeight: '600',
-              color: theme('colors.gray.100'),
+              color: theme('colors.slate.100'),
             },
             'h4,h5,h6': {
-              color: theme('colors.gray.100'),
+              color: theme('colors.slate.100'),
             },
             pre: {
               backgroundColor: theme('colors.gray.800'),
@@ -131,18 +133,16 @@ module.exports = {
               backgroundColor: theme('colors.gray.800'),
             },
             hr: { borderColor: theme('colors.gray.700') },
-            'ol li::marker': {
+            'ol li:before': {
               fontWeight: '600',
               color: theme('colors.gray.400'),
             },
-            'ul li::marker': {
+            'ul li:before': {
               backgroundColor: theme('colors.gray.400'),
             },
             strong: { color: theme('colors.gray.100') },
             thead: {
-              th: {
-                color: theme('colors.gray.100'),
-              },
+              color: theme('colors.gray.100'),
             },
             tbody: {
               tr: {
