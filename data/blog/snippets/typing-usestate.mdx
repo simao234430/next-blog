@@ -48,7 +48,7 @@ The type `Dispatch<SetStateAction<T>>` here is basically a function that accepts
 
 So basically you can also do this here:
 
-```tsx:Snippets.tsx
+```tsx:Snippets.tsx  {6-13} showLineNumbers
 interface SnippetsProps {
   number: number
   setNumber: (v: number) => void
@@ -63,6 +63,31 @@ export const Snippets = ({ number, setNumber }: SnippetsProps) => {
   )
 }
 ```
+
+```tsx:test.tsx
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
+
+const ProductSchema = new Schema(
+  {
+    name: {
+      type: String,
+      required: true,
+    },
+    price: {
+      type: Number,
+      required: true,
+    },
+    description: {
+      type: String,
+      required: true,
+    },
+  },
+  { timestamps: true }
+);
+```
+
+module.exports = mongoose.model("Product", ProductSchema);
 
 We just saved two imports just by declaring it as a function that accepts a number, and returns nothing.
 

@@ -35,6 +35,22 @@ export const Blog = defineDocumentType(() => ({
   computedFields,
 }))
 
+// export const Snippet = defineDocumentType(() => ({
+//   name: "Snippet",
+//   filePathPattern: 'snippets/**/*.mdx',
+//   contentType: 'mdx',
+//   fields: {
+//     title: { type: 'string', required: true },
+//     date: { type: 'date', required: true },
+//     tags: { type: 'list', of: { type: 'string' } },
+//     lastmod: { type: 'date' },
+//     draft: { type: 'boolean' },
+//     summary: { type: 'string' },
+//     images: { type: 'list', of: { type: 'string' } },
+//     layout: { type: 'string' }
+//   },
+// }));
+
 export const Authors = defineDocumentType(() => ({
   name: 'Authors',
   filePathPattern: 'authors/**/*.mdx',
