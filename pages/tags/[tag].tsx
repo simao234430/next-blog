@@ -48,3 +48,5 @@ export default function Tag({ posts, tag }: TagProps) {
     </MainLayout>
   )
 }
+
+

@@ -16,7 +16,7 @@ export default function PostCard({ posts, showTags = true }: PostCardProps) {
       {posts.map(({ slug, title, tags, summary,date }, index) => (
         <motion.li
           key={slug}
-          className="py-4"
+          className="py-2"
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.6, delay: index / 10 }}
