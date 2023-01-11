@@ -16,3 +16,4 @@ export default function About({ author }: InferGetStaticPropsType<typeof getStat
     </MainLayout>
   )
 }
+
