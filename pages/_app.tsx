@@ -1,6 +1,6 @@
 import '@/styles/prism.css'
 import '@/styles/tailwind.css'
-import 'prism-themes/themes/prism-one-dark.css'
+// import 'prism-themes/themes/prism-one-dark.css'
 import '@/styles/globals.css'
 // import 'katex/dist/katex.css'
 
