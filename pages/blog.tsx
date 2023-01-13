@@ -6,7 +6,7 @@ import { allCoreContent, sortedBlogPost } from '@/lib/utils/contentlayer'
 import { allBlogs } from 'contentlayer/generated'
 import { InferGetStaticPropsType } from 'next'
 
-export const POSTS_PER_PAGE = 5
+export const POSTS_PER_PAGE = 4
 
 export const getStaticProps = async () => {
   const activePosts = allBlogs.filter((p) => p.draft === false)

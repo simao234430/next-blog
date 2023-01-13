@@ -3,6 +3,7 @@ import { ReactNode } from 'react'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 import SectionContainer from '../components/SectionContainer'
+import ScrollTopAndComment from '../components/ScrollTopAndComment'
 
 interface Props {
   children: ReactNode
@@ -30,7 +31,10 @@ export default function MainLayout({ children }: Props) {
           {children}
         </motion.main>
         <Footer />
+
       </div>
+      <ScrollTopAndComment />
     </SectionContainer>
+
   )
 }

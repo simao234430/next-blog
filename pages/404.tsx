@@ -12,6 +12,7 @@ export default function FourZeroFour() {
         </div>
         <div className="max-w-md">
           <p className="mb-4 text-xl font-bold leading-normal md:text-2xl">
+            // eslint-disable-next-line react/no-unescaped-entities
             Sorry we couldn't find this page.
           </p>
           <p className="mb-8">
