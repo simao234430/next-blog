@@ -22,7 +22,7 @@ export default function Header() {
                 }
               )}
             >
-              d.
+              肖老板的博客
             </div>
           </Link>
         </div>
