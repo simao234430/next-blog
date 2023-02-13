@@ -4,12 +4,15 @@ import Footer from '../components/Footer'
 import Header from '../components/Header'
 import SectionContainer from '../components/SectionContainer'
 import ScrollTopAndComment from '../components/ScrollTopAndComment'
+ 
 
 interface Props {
   children: ReactNode
+  slug: string
 }
 
-export default function MainLayout({ children }: Props) {
+export default function MainLayout({ children,slug }: Props) {
+  console.log(slug)
   const variants = {
     hidden: { opacity: 0, x: -200 },
     enter: { opacity: 1, x: 0 },
@@ -17,6 +20,7 @@ export default function MainLayout({ children }: Props) {
   }
 
   return (
+ 
     <SectionContainer>
       <Header />
       <div className="flex flex-col justify-between h-screen">
@@ -33,7 +37,7 @@ export default function MainLayout({ children }: Props) {
         <Footer />
 
       </div>
-      <ScrollTopAndComment />
+      <ScrollTopAndComment slug={slug} />
     </SectionContainer>
 
   )

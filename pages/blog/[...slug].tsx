@@ -5,6 +5,7 @@ import MainLayout from '@/layouts/MainLayout'
 import { coreContent, sortedBlogPost } from '@/lib/utils/contentlayer'
 import { allBlogs } from 'contentlayer/generated'
 import { InferGetStaticPropsType } from 'next'
+import { FaSuitcaseRolling } from 'react-icons/fa'
 
 const DEFAULT_LAYOUT = 'PostLayout'
 
@@ -28,6 +29,8 @@ export const getStaticProps = async ({ params }: any) => {
   const post = sortedPosts.find((p) => p.slug === slug)
   const author = post?.author || ['default']
 
+ 
+
   return {
     props: {
       post,
@@ -47,7 +50,7 @@ export default function Blog({
   return (
     <>
       <ScrollProgressBar />
-      <MainLayout>
+      <MainLayout slug={post.slug}>
         {post && 'draft' in post && post.draft !== true ? (
           <MDXLayoutRenderer
             layout={post.layout || DEFAULT_LAYOUT}
@@ -67,7 +70,7 @@ export default function Blog({
             </PageTitle>
           </div>
         )}
-      </MainLayout>
+      </MainLayout >
     </>
   )
 }

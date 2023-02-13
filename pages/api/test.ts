@@ -23,14 +23,14 @@ export default async function handler(
     res: NextApiResponse 
   ) {
     const { url } = req.query; // pass the page to create PDF from as param
-
+    console.log(url)
     res.setHeader(
       'Content-Disposition',
       `attachment; filename="file.pdf"`
     );
     res.setHeader('Content-Type', 'application/pdf');
   
-    const pdf = await saveAsPdf('http://localhost:3000/blog/why-does-react-need-keys');
+    const pdf = await saveAsPdf('http://localhost:3000/blog/create-and-publish-your-own-react-component-library-with-typescript-storybook-and-tailwind');
     return res.send(pdf);
   }
   

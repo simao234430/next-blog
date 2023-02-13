@@ -1,9 +1,14 @@
+
 import { useEffect, useState } from 'react'
 
-const ScrollTopAndComment = () => {
+const ScrollTopAndComment = (props: { slug: string }) => {
   const [show, setShow] = useState(false)
+  // const {asPath} = useRouter()
+ 
+  // console.log( asPath.split('#')[0].split('?')[0]);
 
   useEffect(() => {
+    
     const handleWindowScroll = () => {
       if (window.scrollY > 50) setShow(true)
       else setShow(false)
@@ -16,6 +21,13 @@ const ScrollTopAndComment = () => {
   const handleScrollTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
+  const pdf_download = () => {
+    window.location.href="http://localhost:3000/api/pdfs/"+ props.slug
+
+ 
+
+  }
+
   const handleScrollToComment = () => {
     // document.getElementById('comment').scrollIntoView()
   }
@@ -37,6 +49,22 @@ const ScrollTopAndComment = () => {
           />
         </svg>
       </button>
+
+      <button
+        aria-label="Download pdf"
+        type="button"
+        onClick={pdf_download}
+        className="p-2 text-gray-500 transition-all bg-gray-200 rounded-full dark:text-gray-400 dark:bg-gray-700 dark:hover:bg-gray-600 hover:bg-gray-300"
+      >
+        <svg className="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+        <path
+            fillRule="evenodd"
+            d="M3.875 17.188v-1.73h12.25v1.73ZM10 13.958 5.833 9.792l1.229-1.209 2.063 2.063V2.812h1.75v7.834l2.063-2.063 1.229 1.209Z"
+            clipRule="evenodd"
+          />
+        </svg>
+      </button>
+
       <button
         aria-label="Scroll To Top"
         type="button"
